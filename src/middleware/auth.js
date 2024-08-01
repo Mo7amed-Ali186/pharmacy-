@@ -9,7 +9,7 @@ const auth = async (req, res, next) => {
     try {
         const token = req.headers.token
         if (!token) {
-            return res.json({ message: "token is requierd" });
+            return res.json({ message: "token is required" });
         }
         const decoded = verifyToken({ token })
         // console.log(decoded)
