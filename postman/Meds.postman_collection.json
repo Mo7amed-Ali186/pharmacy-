@@ -1,0 +1,735 @@
+{
+	"info": {
+		"_postman_id": "17eb0420-7cf7-4171-9944-495b4e2b3db6",
+		"name": "Meds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22320377"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mohamed.k.1993@gmail.com\",\r\n    \"password\":\"mohame213\",\r\n    \"cPassword\":\"mohame213\",\r\n    \"phone\":\"010212892313\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mohamed.k.1992@gmail.com\",\r\n    \"password\":\"mohame213\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/logIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"logIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signUp (Admin)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mohamed.k.1992@gmail.com\",\r\n    \"password\":\"mohame213\",\r\n    \"cPassword\":\"mohame213\",\r\n    \"phone\":\"010212892313\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/signUpAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"signUpAdmin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "get all category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2MzNTZkZGRlZDliNGZlOGMyOThmZCIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTY3MDY5OX0.dOUPtoO8itS_5zEfx5CO8UtamQYpo2Zak4ffjJr9XuE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0NDA0ZDgzYTFlODYzNjI5ZmRlNiIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTQwOTA1NX0.AGeOtDeMHZNd51k1HKHv7cC4xm96dtYvn29uWe5UE30",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/category/643c42e1180b1532bdf56dd7/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								"643c42e1180b1532bdf56dd7",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0NDA0ZDgzYTFlODYzNjI5ZmRlNiIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTQwOTA1NX0.AGeOtDeMHZNd51k1HKHv7cC4xm96dtYvn29uWe5UE30",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/category/643c42e1180b1532bdf56dd7/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								"643c42e1180b1532bdf56dd7",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get medicine of category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/category/64384c337e62ea22c2fb6b61/medicine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								"64384c337e62ea22c2fb6b61",
+								"medicine"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medicine",
+			"item": [
+				{
+					"name": "create medicine",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0NDA0ZDgzYTFlODYzNjI5ZmRlNiIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTQwOTA1NX0.AGeOtDeMHZNd51k1HKHv7cC4xm96dtYvn29uWe5UE30",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "med2-4",
+									"type": "text"
+								},
+								{
+									"key": "descriotion",
+									"value": "med1asdasdasdasdasdasdsa",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "140",
+									"type": "text"
+								},
+								{
+									"key": "expaireDate",
+									"value": "4/24/2023",
+									"type": "text"
+								},
+								{
+									"key": "categoryName",
+									"value": "category2",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Ebnmaged 74/Downloads/test2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/medicine/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"medicine",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update medicine",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0NDA0ZDgzYTFlODYzNjI5ZmRlNiIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTQwOTA1NX0.AGeOtDeMHZNd51k1HKHv7cC4xm96dtYvn29uWe5UE30",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "price",
+									"value": "1200",
+									"type": "text"
+								},
+								{
+									"key": "expaireDate",
+									"value": "4/23/2023",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Ebnmaged 74/Downloads/test2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/medicine/64384548192ef4d8e5376546",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"medicine",
+								"64384548192ef4d8e5376546"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete medicine",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2MzNTZkZGRlZDliNGZlOGMyOThmZCIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTY2ODAxNn0.Ey10BKKKgjllFTnga_aoEbAdbqV5spubJ1eFZdJ6fx4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:5000/medicine/64384c4f7e62ea22c2fb6b79/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"medicine",
+								"64384c4f7e62ea22c2fb6b79",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all medicine",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/medicine/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"medicine",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "create (add cart)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg1MGIxYmMyODJhYzhiMDBmODliOSIsInJvbGUiOiJQYXRpZW50IiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjgxNDEyMjc3fQ._uPFJt_O-m8JL_0RfunIHMzqCEvcUZdZO-GdnYSF7yU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:5000/cart/64384c407e62ea22c2fb6b6a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								"64384c407e62ea22c2fb6b6a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cart (user)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0ZmI2ZWI3YzZhMjgzMTBhMGQ0MSIsInJvbGUiOiJQYXRpZW50IiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjgxNDEyMDI1fQ.YAkJZZG6gTaTMhxGdTAch5cRnvtL6phAUL0NvdyyL_c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/cart/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all cart (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0NDA0ZDgzYTFlODYzNjI5ZmRlNiIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTQwOTA1NX0.AGeOtDeMHZNd51k1HKHv7cC4xm96dtYvn29uWe5UE30",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get all user (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0NDA0ZDgzYTFlODYzNjI5ZmRlNiIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTQwOTA1NX0.AGeOtDeMHZNd51k1HKHv7cC4xm96dtYvn29uWe5UE30",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user (Admin)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0NDA0ZDgzYTFlODYzNjI5ZmRlNiIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTQwOTA1NX0.AGeOtDeMHZNd51k1HKHv7cC4xm96dtYvn29uWe5UE30",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"01010012323\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/643845de1dc805ed01ba90bc/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"643845de1dc805ed01ba90bc",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user(Admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Mzg0NDA0ZDgzYTFlODYzNjI5ZmRlNiIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTQwOTA1NX0.AGeOtDeMHZNd51k1HKHv7cC4xm96dtYvn29uWe5UE30",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/643850b1bc282ac8b00f89b9/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"643850b1bc282ac8b00f89b9",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "request user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2MzNGY1ZGRlZDliNGZlOGMyOThmNyIsInJvbGUiOiJQYXRpZW50IiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjgxNjY4OTg5fQ.LOjDU9ygahUSYuFOi0OukBLQQOgmMh5M4aAaDhbScCo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"mahomed\",\r\n    \"phone\":\"01212121212\",\r\n    \"typeClinic\":\"asddasdasdasda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin (accepted || rejected)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2MzNTZkZGRlZDliNGZlOGMyOThmZCIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTY2OTU2Nn0.XDNKUWEU7OCL24y2-wfCvMyPdGL9_jbLm0SFkTyBldk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"action\":\"rejected\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/643c4276902f9d13db5fb818/waiting",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"643c4276902f9d13db5fb818",
+								"waiting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get request of the user login",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2MzNGY1ZGRlZDliNGZlOGMyOThmNyIsInJvbGUiOiJQYXRpZW50IiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjgxNjcwNTIyfQ.-f6XSzOp_jz6j-duMlLmsn7lgV2a41aCkYuRT3dNFmE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all requests (admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2MzNTZkZGRlZDliNGZlOGMyOThmZCIsInJvbGUiOiJBZG1pbiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY4MTY3MDY5OX0.dOUPtoO8itS_5zEfx5CO8UtamQYpo2Zak4ffjJr9XuE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/request/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"request",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
